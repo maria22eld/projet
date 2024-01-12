@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+/* nav.css */
+* {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+.banner {
+    width: 100%;
+    height: 100vh;
+    /*creates a semi-transparent black overlay using a linear gradient*/
+    background-image: linear-gradient(rgba(17, 17, 17, 0.5),rgba(0,0,0,0.5)),url("https://img.freepik.com/photos-premium/doctor-looking-at-computer-screen-that-says-heart-on-it_171308-2056.jpg");
+    /*covers the entire elements without any gaps*/
+    background-size: cover;
+    /*centered background image horizontally and vertically*/
+    background-position: center;
+}
+.navbar {
+    width: 85%;
+    /*center an element horizontally within its parent*/
+    margin: auto;
+    /*adding 35px to the top and 0 to the bottom*/
+    padding: 35px 0;
+    /*align elements*/
+    display: flex;
+    /*aligns the items vertically in the center */
+    align-items: center;
+    /*space between them*/
+    justify-content: space-between;
+}
+.logo {
+    color: aliceblue;
+}
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color:aliceblue;
+    text-transform: uppercase;
+}
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f3f2f2cc;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.navbar ul li:hover::after {
+    width:100%;
+
+}
+#scrollToTopBtn {
+    display:none;
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background-color: rgb(255, 255, 255);
+     border: 1px solid black;
+     border-radius: 5px;
+     padding: 10px;
+     cursor: pointer;
+   
+   }
+.content {
+    width:100%;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.895);
+}
+.content h1 {
+    font-size: 50px;
+    margin-top: 80px;
+}
+.content p {
+    margin:20px auto;
+    font-weight: 99;
+    line-height:30px ;
+    color:azure;
+}
+
+.banner_btn {
+    margin: 40px auto 0;
+}
+.banner_btn a{
+    width:150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: .5px solid #fff;
+    position:relative;
+    z-index: 1;
+    transition:color 0.5s;
+    border-radius: 15px;
+}
+.banner_btn a span {
+    width: 0;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background:aliceblue; 
+    z-index: -1;
+    transition: 0.7s;
+    border-radius: 15px;
+    
+}
+.banner_btn a:hover span {
+    width:100%;
+   border-radius: 15px;
+}
+.banner_btn a:hover {
+    color: #000;
+    border-radius: 15px;
+    
+}
+/*chatgpt*/
+/* For screens smaller than 768px (typical mobile devices) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .navbar ul {
+        margin-top: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+
+/* footer.css */
+footer {
+    font-family:Lato-Regular;
+    width: 100%;
+    position:static;
+    bottom: 0;
+    background: linear-gradient(to right,#342e72,rgb(39, 40, 90),rgb(15, 18, 59) ,rgb(0, 55, 107));
+    color: #ffffff;
+    padding: 8px 0 4px;
+    font-size: 14px;
+    line-height: 20px;   
+   
+
+}
+
+.row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.col {
+    flex-basis: 20%;
+    padding: 25px;
+}
+
+footer .logo {
+    margin-top: 20px;
+    width: 100px;
+    font-size: 20px;
+    color:#ffffff;
+    margin-bottom:35px;
+}
+.col p {
+    font-size: 14px;
+}
+.col h3 {
+    width: fit-content;
+    margin-bottom: 50px;
+    position:sticky;
+}
+.col .underline .fab
+{
+    font-size: 18px;
+    margin-right: 10px;
+
+}
+.social-icons{
+    animation: alternate;
+}
+
+.social-icons .fab {
+    width: 30px;
+    height: 30px;
+    border-radius:50% ;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: #000;
+    background: rgb(255, 255, 255);
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.social-icons .fab:hover{
+    transform: scale(1.2);
+    background:black;
+    color:white;
+}
+.contact{
+    margin:20px;
+    margin-left: -5px;
+}
+.contact:hover{
+    transform: scale(1.1);
+}
+form footer {
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 50px;
+}
+
+
+footer form input  {
+    
+    width: 100%;
+    background: transparent;
+    margin-top: 10px;
+    color: #ffffff;
+    border: 0;
+    outline:none;
+    border-bottom: 1px solid white;
+}
+
+footer form button {
+    background: transparent;
+    border: 0;
+    color: white;
+}
+footer form button :hover{
+    transform: scale(1.2);
+}
+
+footer form button .fas footer {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+.col h3:hover  {
+    font-size: large;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+}
+.underline {
+    width: 100%;
+    height: 3px;
+    background: #bdaaaa;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation:moving 2s infinite ;
+   
+}
+
+@keyframes moving {
+    0% {
+        left: -2px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@media (max-width:700px) {
+    footer {
+        bottom: unset;
+    }
+    .col {
+        flex-basis: 100%;
+    }
+  
+}
+
+
+
+/* souha servicesSection */
+.title
+{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem;
+    color:black;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*margin:auto; */
+    margin-left:120px;
+    margin-right:120px;
+    margin-top:5px;
+}
+
+
+
+.icons {
+    margin-top:100px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    width:250px;
+    height:250px;
+}
+
+p
+{
+    font-size: 24px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.title
+{
+    font-size: 30px;
+    text-align: center;
+    color:black;
+    margin-top:50px;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*margin:auto; */
+    margin-left:120px;
+    margin-right:120px;
+    margin-top:5px;
+}
+
+.services {
+    margin-bottom: 0;
+    margin-top: 100px;
+    height: 250px;
+}
+
+.services_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:50px;
+    
+}
+
+
+.icons {
+    margin-top:100px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    width:250px;
+    height:250px;
+}
+
+p
+{
+    font-size: 24px;
+    margin-top: 40px;
+    text-align: center;
+}
+.sss{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    background-color: transparent;
+    margin-top: 0;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 100000;
+}
+.heart-rate
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 248px;
+    height:248px;
+    position: relative;
+    z-index: 100;
+}
+
+
+.fade-in{
+    border-radius:50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    top: 0;
+    right: 0;
+    animation: heartRateIn 2.5s linear infinite;
+   
+    }
+    
+    .fade-out{
+    border-radius:50%;
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-color: #ffffff;
+    top: 0;
+    right: -120%;
+    animation: heartRateOut 2.5s linear infinite;
+    background: white;
+    background: linear-gradient(to right,white 0%, white 80%,white 100%);
+    }
+    
+    @keyframes heartRateIn{
+        0%{
+            width: 100%;
+        }
+        50%{
+            width: 0;
+        }
+        100%{
+            width: 0;
+        }
+    }
+    @keyframes heartRateOut{
+        0%{
+            left: -120%;
+        }
+        30%{
+            left: -120%;
+        }
+        100%{
+            left: 0;
+        }
+    
+    }
+
+.links{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/*mod for maria*/
+
+#burgermenu
+{
+    width:40px;
+    display:none;
+}
+
+.navbar ul
+{
+    flex:1;
+    text-align: right;
+}
+
+@media(max-width:794px)
+{
+    #burgermenu
+    {
+        display: inline-block;
+    }
+    .navbar ul
+    {
+        display:none;
+    }
+    .navbar
+    {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+.side-bar
+{
+    display:none;
+}
+
+.side-bar ul
+{
+    display:flex;
+    flex-direction: column;
+    position:fixed;
+    top:50px;
+    right:0;
+    list-style: none;
+    background-color: white;
+    color:black;
+    bottom: 0;
+}
+
+.side-bar ul li{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+

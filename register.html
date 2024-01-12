@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="register.css" />
+  <title>Join Us</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form action="d_registration.php" class="sign-in-form" method="post" enctype="multipart/form-data">
+          <h2 class="title">Medecin?</h2>
+
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Nom et prenom" class="username" name="username"/>
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="far fa-credit-card"></i>
+            <input id="ssnumber" type="number" placeholder="numero de sécurité sociale"
+              class="ssnumber" name="ssnumber">
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="email" class="email" name="email">
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-hospital"></i>
+            <input type="text" id="speciality" placeholder="spécialité" class="speciality" name="Specialite_soignant">
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-map"></i>
+            <input type="text" id="address" placeholder="adresse" class="address" name="address">
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-download"></i>
+            <input type="file" accept="file/pdf" placeholder="diplome" value="diplome" class="file" title="diplome"
+              required>
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-download"></i>
+            <input type="file" accept="file/pdf" placeholder="certificat d'honneur" class="file" required
+              title="certificat d'honneur">
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="mot de passe" class="mdp" name="mdp">
+            <div class="error"></div>
+          </div>
+          <input type="submit" value="s'inscrire" class="btn solid" id="btn1" />
+          <p class="connection-text">déja inscris? <a href="Join.html/#connectionForm" class="connection"
+              id="content-block-doctor">se connetcter</a></p>
+
+        </form>
+        <form action="p_registration.php" class="sign-up-form" method="post">
+          <h2 class="title">Patient?</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Nom et prénom" class="username" name="username"/>
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" class="email" name="email"/>
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-phone"></i>
+            <input id="phone" type="tel" placeholder="numero de telephone"
+              class="phone" name="phone">
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="far fa-credit-card"></i>
+            <input id="ssnumber" type="number" placeholder="numero de sécurité sociale"
+              class="ssnumber" name="ssnumber">
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-map"></i>
+            <input type="text" id="address" placeholder="adresse" class="address" name="address">
+            <div class="error"></div>
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="mot de passe" class="mdp" name="password">
+            <div class="error"></div>
+          </div>
+          <input type="submit" name="submit" class="btn" value="s'inscrire" id="btn2"/>
+          <p class="connection-text">déja inscris? <a href="Join.html/#connectionForm" class="connection"
+              id="content-block-patient">se connetcter</a></p>
+
+        </form>
+      </div>
+    </div>
+
+
+    <!-- pannels -->
+    <div class="panels-container">
+      <div class="panel left-panel">
+
+        <div class="content">
+          <h3>Patient?</h3>
+          <p>
+            vous êtes un patitent en recherche du meilleure service medicale ou paramedicale
+          </p>
+          <button class="btn transparent" id="to-patient">
+            cliquiez ici
+          </button>
+        </div>
+        <img src="img/injured_9757.svg" class="image" alt="" />
+      </div>
+
+
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>Medecin?</h3>
+          <p>
+            vous êtes spécialisé dans un domain médicale ou paramédicale et vous voulez travallier avec nous?
+          </p>
+          <button class="btn transparent" id="to-doctor">
+            cliquez ici
+          </button>
+        </div>
+        <img src="img/forleftg.svg" class="image" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- connection forms -->
+  <div class="outerContainer">
+  </div>
+  <div class="window-doctor-container" id="window-doctor-container">
+    <div class="window-doctor">
+      <form class="connectionFormDoctor" method="post" action="d_connection.php">
+        <h2 class="title">Connexion</h2>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email" class="email" name="email"/>
+          <div class="error"></div>
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="mot de passe" class="mdp" name="password">
+          <div class="error"></div>
+        </div>
+        <input type="submit" class="btn" value="se connecter" id="btn3"/>
+      </form>
+    </div>
+  </div>
+
+  
+  <div class="window-patient-container" id="window-patient-container">
+    <div class="window-patient">
+      <form class="connectionFormPatient" method="post" action="p_connection.php">
+        <h2 class="title">Connexion</h2>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email" class="email" name="email"/>
+          <div class="error"></div>
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="mot de passe" class="mdp" name="password">
+          <div class="error"></div>
+        </div>
+        <input type="submit" class="btn" value="se connecter" id="btn3"/>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- confirmation forms -->
+  <div class="outerDoctorForm"></div>
+  <div class="outerDoctorSuccess">
+    <div class="doctorRegistrationSuccess">
+      <i class="fas fa-check"></i>
+      <p class="TEXT" id="text1"></p>
+      <p class="TEXT" id="text2"></p>
+      <p class="TEXT" id="text3"></p>
+    </div>
+  </div>
+
+
+  <div class="outerPatientForm"></div>
+  <div class="outerPatientSuccess">
+    <div class="patientRegistrationSuccess">
+      <i class="fas fa-check"></i>
+      <p>on est entrain de créer votre compte</p>
+      <p>veillez confirmer votre information</p>
+      <p>entrer le code envoyer par email</p>
+      <form method="post" action="p_registration.php">
+        <input placeholder="code de confirmation" name="confirmationCode">
+        <input type="submit" name="submit" value="confirmer">
+      </form>
+    </div>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+
+</html>

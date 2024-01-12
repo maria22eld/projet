@@ -1,0 +1,58 @@
+.box {
+    background-color: #eaeae1;
+    color: #202C59;
+    width: 200px;
+    height: 150px;
+    margin: 2rem;
+    padding: 1rem;
+    transition: transform 0.4s;
+    border: solid 1px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box p{
+    text-align: center;
+}
+
+
+.briefDescription {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box.zoomed {
+    transform: scale(1.3);
+    background-color:#202C59;
+    color: #eaeae1;
+    box-shadow: 3px 3px 5px rgb(107, 103, 103);
+}
+
+
+.icon{
+    transform: scale(1.5);
+    /* margin: 1rem; */
+}
+
+.briefDescriptionTitle{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.yousra{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.box p{
+    font-size: 1rem;
+}

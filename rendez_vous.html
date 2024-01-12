@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rendez_vous</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="rendez_vous.css" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h2 class="logo">HomeMed</h2>
+            <ul>
+                <li><a href="index.html">ACCEUIL</a></li>
+                <li><a href="apropos.html">A PROPOS</a></li>
+                <li><a href="services.html">SERVICE</a></li>
+                <li><a href="index.html#footer">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="container ">
+            <h1>Choisissez un service!</h1>
+            <div class="btns">
+                <button type="submit" class="btn" data-service-type="medical">Services médicales</button>
+                <button type="submit" class="btn" data-service-type="paramedical">services paramédicales</button>
+
+            </div>
+            <!-- Add this to your HTML body -->
+            <div class="service-modal">
+                <div class="service-list-container">
+                    <ul></ul>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+    <script src="rendez_vous.js"></script>
+</body>
+
+</html>
